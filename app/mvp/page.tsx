@@ -2,6 +2,10 @@
 // 👆 Este archivo se ejecuta en el cliente (navegador), no en el servidor.
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
+import { useRouter } from "next/navigation";
+
+const [message, setMessage] = useState<string | null>(null);
+const router = useRouter();
 // 🧩 Definimos la estructura (tipo) de una actividad
 interface Actividad {
 id: string;
